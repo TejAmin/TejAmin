@@ -2,7 +2,7 @@
 
 # 👋 Hey, I'm Tej Deepak Amin
 
-### Control Systems & ML Engineer · MPC · Vehicle Dynamics · Autonomous Systems
+### Control Systems & ML Engineer · MPC · Reinforcement Learning · Vehicle Dynamics
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tej-amin3103)
 [![TU Dortmund](https://img.shields.io/badge/TU%20Dortmund-003DA0?style=for-the-badge&logo=academia&logoColor=white)](https://www.tu-dortmund.de)
@@ -14,14 +14,15 @@
 
 ## 🧑‍💻 About Me
 
-I'm an **MSc student in Automation & Robotics at TU Dortmund** and a **Research Assistant at the Lamarr Institute for Machine Learning and AI**, specializing in advanced control strategies for dynamic and safety-critical systems.
+I'm an **MSc student in Automation & Robotics at TU Dortmund** (GPA: 1.65) and a **Research Assistant at the Lamarr Institute for Machine Learning and AI**, specializing in advanced control strategies for autonomous and safety-critical systems.
 
-My work spans **nonlinear optimization**, **Model Predictive Control (MPC)**, and **machine learning** (PyTorch, TensorFlow) applied to autonomous driving and vehicle trajectory control. I'm passionate about building intelligent systems that bridge rigorous control theory with modern learning-based approaches.
+My research focuses on bridging **Model Predictive Control (MPC)** with **deep reinforcement learning** for vehicle dynamics and trajectory optimization. I develop control-oriented models and benchmarking pipelines that combine rigorous optimization theory with modern learning-based approaches.
 
-- 🔭 Currently: **Research Assistant @ Lamarr Institute** — control-oriented modeling, benchmarking pipelines & ML for dynamic systems
-- 🚗 Focus: **MPC, Vehicle Dynamics, Autonomous Systems, Constrained Optimal Control**
-- 🤖 ML side: **CNNs, LSTMs, Transformers** for time-series prediction & system modeling
-- 🎯 Goal: R&D roles in **intelligent mobility & next-gen vehicle stability control**
+- 🔭 Currently: **Research Assistant @ Lamarr Institute** — control-oriented modeling, ML benchmarking & advanced control for dynamic systems
+- 🚗 Research Focus: **MPC-RL Integration, Vehicle Dynamics, Autonomous Driving, Constrained Optimal Control**
+- 🤖 ML Expertise: **Deep RL (SAC, PPO), CNNs, LSTMs, Transformers** for control and time-series prediction
+- 🎯 Goal: R&D in **intelligent mobility, autonomous systems & next-gen vehicle stability control**
+- 📍 Based in: **Dortmund, Germany**
 - 🏏 Fun fact: Huge cricket fan!
 
 ---
@@ -39,12 +40,14 @@ My work spans **nonlinear optimization**, **Model Predictive Control (MPC)**, an
 ### Control & Optimization
 ![MPC](https://img.shields.io/badge/Model%20Predictive%20Control-1A1A2E?style=flat-square)
 ![CasADi](https://img.shields.io/badge/CasADi-4B0082?style=flat-square)
-![PID](https://img.shields.io/badge/PID%20Control-2C3E50?style=flat-square)
+![RL](https://img.shields.io/badge/Deep%20RL%20(SAC%2FPPO)-FF6B6B?style=flat-square)
+![Stable-Baselines3](https://img.shields.io/badge/Stable--Baselines3-00D4AA?style=flat-square)
 ![State Space](https://img.shields.io/badge/State--Space%20Modeling-34495E?style=flat-square)
 
 ### Tools & Platforms
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![ROS2](https://img.shields.io/badge/ROS2-22314E?style=flat-square&logo=ros&logoColor=white)
 ![ANSYS](https://img.shields.io/badge/ANSYS%20Maxwell-FFB71B?style=flat-square)
 ![Typhoon HIL](https://img.shields.io/badge/Typhoon%20HIL-00897B?style=flat-square)
 
@@ -57,35 +60,44 @@ My work spans **nonlinear optimization**, **Model Predictive Control (MPC)**, an
 
 ## 🚀 Featured Projects
 
-### 🔵 Self-Driving Obstacle Avoidance using MPC
-> Formulated a **nonlinear optimal control problem** for autonomous highway driving using a kinematic vehicle model with dynamic and safety constraints. Implemented a full **constrained MPC framework in Python/CasADi**, incorporating lateral & longitudinal dynamics for stable high-speed obstacle avoidance.
+### 🔴 Deep Reinforcement Learning for Autonomous Obstacle Avoidance *(Master's Project)*
+> Developed **Soft Actor-Critic (SAC)** agent using Stable-Baselines3 for high-speed highway obstacle avoidance with kinematic bicycle model. Designed custom **HighwayObstacleEnv** with curriculum learning, EMA action smoothing, Gaussian obstacle repulsion, and adaptive reward shaping. Implemented **parallel training infrastructure** using SubprocVecEnv and GPU acceleration (Kaggle/Colab). RL agent achieves **~80-85% of MPC performance** with significantly faster inference. Currently exploring **MPC-RL hybrid architectures** (MPC-guided RL, safety filters, hierarchical control) and **imitation learning** techniques (Behavioral Cloning, DAgger, GAIL).
 
-`Python` `CasADi` `MPC` `Nonlinear Optimization` `Linux` `Simulation`
+`Python` `PyTorch` `Deep RL (SAC)` `Stable-Baselines3` `Curriculum Learning` `Imitation Learning` `Parallel Training`
 
-[![Repo](https://img.shields.io/badge/GitHub-APC__ObstacleAvoidance-181717?style=flat-square&logo=github)](https://github.com/TejAmin/APC_ObstacleAvoidance_P1.2)
+[![Repo](https://img.shields.io/badge/GitHub-RL__ObstacleAvoidance-181717?style=flat-square&logo=github)](https://github.com/TejAmin/APC_ObstacleAvoidance_P1.2)
 
 ---
 
-### 🟡 Solar Flare Prediction using Machine Learning *(ongoing)*
-> Designing **CNN, LSTM, and Transformer architectures** for time-series forecasting using PyTorch and TensorFlow. Investigating robustness, uncertainty-aware prediction models, and reinforcement learning approaches for control-oriented decision-making.
+### 🔵 Nonlinear MPC for Autonomous Highway Driving *(Master's Project)*
+> Formulated a **constrained nonlinear optimal control problem** for autonomous navigation using kinematic bicycle model with CasADi. Implemented full **MPC framework** with lateral & longitudinal dynamics, collision avoidance constraints, and real-time trajectory optimization. System handles dynamic obstacle scenarios while maintaining vehicle stability at high speeds. Used as **benchmark baseline** for RL comparison study.
 
-`PyTorch` `TensorFlow` `Time-Series` `Transformers` `LSTM` `Uncertainty Quantification`
+`Python` `CasADi` `MPC` `Nonlinear Optimization` `Vehicle Dynamics` `Constrained Control`
+
+[![Repo](https://img.shields.io/badge/GitHub-MPC__ObstacleAvoidance-181717?style=flat-square&logo=github)](https://github.com/TejAmin/APC_ObstacleAvoidance_P1.2)
+
+---
+
+### 🟡 Solar Flare Prediction using Ensemble ML
+> Developed **physics-informed ML models** for binary solar flare prediction using SDO/HMI SHARP parameters (726 samples, heavily imbalanced). Implemented **LightGBM ensemble** with GroupKFold CV, SMOTE oversampling, and engineered features from magnetic field parameters. Achieved **ROC-AUC ~0.71** and **True Skill Statistic (TSS) ~0.48**, significantly outperforming baseline models. Applied uncertainty quantification techniques for reliable probabilistic forecasting.
+
+`Python` `LightGBM` `SMOTE` `Feature Engineering` `Imbalanced Learning` `Time-Series` `Uncertainty Quantification`
 
 ---
 
 ### 🟣 Data-based Modeling of Slug Flow Crystallization with UQ
-> Built predictive models for a crystallization process using **NARX neural networks**. Applied unsupervised ML for time-series clustering and implemented **Conformalized Quantile Regression (CQR)** for real-time uncertainty quantification.
+> Built predictive models for a crystallization process using **NARX neural networks**. Applied unsupervised ML for time-series clustering and implemented **Conformalized Quantile Regression (CQR)** for real-time uncertainty quantification with distribution-free coverage guarantees.
 
-`Python` `TensorFlow/Keras` `NARX` `CQR` `Scikit-learn` `Time-Series Forecasting`
+`Python` `TensorFlow/Keras` `NARX` `CQR` `Scikit-learn` `Time-Series Forecasting` `Uncertainty Quantification`
 
 [![Repo](https://img.shields.io/badge/GitHub-SFC__Modeling__ANN-181717?style=flat-square&logo=github)](https://github.com/TejAmin/SFC_Modeling_Using_ANN)
 
 ---
 
 ### 🟢 Wireless EV Charging Coil Optimization *(B.Tech Thesis)*
-> Designed and optimized coil structures for **dynamic wireless power transfer in EVs** using ANSYS Maxwell. Evaluated multiple geometries for efficiency, alignment tolerance, and manufacturability — validated with a working prototype.
+> Designed and optimized coil structures for **dynamic wireless power transfer in EVs** using ANSYS Maxwell. Evaluated multiple geometries for efficiency, alignment tolerance, and manufacturability — validated with a working prototype achieving >85% efficiency.
 
-`ANSYS Maxwell` `Power Electronics` `MATLAB` `PCB Prototyping` `3D Printing`
+`ANSYS Maxwell` `Power Electronics` `MATLAB` `PCB Prototyping` `3D Printing` `FEA`
 
 ---
 
@@ -101,9 +113,21 @@ My work spans **nonlinear optimization**, **Model Predictive Control (MPC)**, an
 | Role | Organisation | Period |
 |------|-------------|--------|
 | 🔬 Research Assistant | Lamarr Institute for ML & AI, Dortmund | May 2025 – Present |
+| 🏎️ Team Captain — Vehicle Dynamics | Etros Solareon Racing (Solar-Powered Hybrid EV) | 2023 – 2024 |
 | 🏎️ Team Lead — Vehicle Dynamics | Etros Solareon Racing | 2020 – 2024 |
 | ⚙️ Instrumentation Intern | Reliance Industries Ltd. (Dahej) | May – Jul 2023 |
 | 💾 Embedded Systems Intern | Microchip Inc. | May – Jul 2023 |
+
+---
+
+## 🎓 Education
+
+| Degree | Institution | GPA/CGPA | Period |
+|--------|------------|----------|--------|
+| 🎓 M.Sc. Automation & Robotics | TU Dortmund University, Germany | 1.65 | 2024 – Present |
+| 🎓 B.Tech Mechatronics Engineering | SRM Institute of Science & Technology, India | 9.23/10 | 2020 – 2024 |
+
+**Relevant Coursework:** Nonlinear Control Systems, Advanced Process Control, Model Predictive Control, Machine Learning, Deep Learning, Reinforcement Learning, Vehicle Dynamics, Embedded Systems
 
 ---
 
@@ -118,15 +142,26 @@ My work spans **nonlinear optimization**, **Model Predictive Control (MPC)**, an
 
 ---
 
-## 🏆 Highlights
+## 🏆 Highlights & Achievements
 
-- 🔬 **Research Assistant** — Lamarr Institute for Machine Learning & AI
+- 🔬 **Research Assistant** — Lamarr Institute for Machine Learning & AI (2025 – Present)
 - 🎓 **M.Sc. Automation & Robotics** — TU Dortmund *(GPA: 1.65, in progress)*
-- 🎓 **B.Tech Mechatronics** — SRM Institute of Science and Technology *(CGPA: 9.23/10, 2024)*
+- 🎓 **B.Tech Mechatronics** — SRM Institute *(CGPA: 9.23/10, 2024)*
 - 🏅 **Academic Excellence Award** — SRM IST *(2021, 2022, 2023 — merit scholarship)*
-- 🏎️ **Team Captain** — Etros Solareon Racing (Solar-Powered Hybrid EV)
+- 🏎️ **Team Captain** — Etros Solareon Racing (Solar-Powered Hybrid EV, 3 years)
+- 📜 **NPTEL Certification** — Control Systems Engineering
 
 ---
+
+## 📫 Let's Connect
+
+I'm passionate about advancing intelligent control systems and always open to discussions on:
+- Advanced Control Systems (MPC, Adaptive Control, Robust Control)
+- Reinforcement Learning for Robotics & Autonomous Systems
+- Vehicle Dynamics & Motion Planning
+- Control-ML Integration & Hybrid Approaches
+
+Feel free to reach out for collaborations, research discussions, or opportunities!
 
 <div align="center">
 
